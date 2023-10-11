@@ -1,7 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit'
+import orderData from '../data/orderData'
 
 const initialState = {
-  value: 0,
+  orderData,
 }
 
 export const orderSlice = createSlice({
@@ -9,13 +10,13 @@ export const orderSlice = createSlice({
   initialState,
   reducers: {
     increment: (state) => {
-      state.value += 1
+      state.orderData += 1
     },
     decrement: (state) => {
-      state.value -= 1
+      state.orderData -= 1
     },
     incrementByAmount: (state, action) => {
-      state.value += action.payload
+      state.orderData += action.payload
     },
   },
 })
