@@ -61,6 +61,7 @@ export const OrderNumberDetails = styled.section`
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    width: 80%;
 `;
 
 export const OrderBreadcrumb = styled.label`
@@ -78,7 +79,7 @@ export const OrderNumberHeader = styled.label`
 `;
 
 export const OrderConfirmationAction  = styled.section`
-    width: 30%;
+    width: 20%;
     display: flex;
     justify-content: space-between;
 `;
@@ -96,13 +97,27 @@ export const OrderItemListContainer = styled.section`
 `;
 
 export const OutlinedButton = styled.button`
-    padding: 10px;
+    padding: 7px;
     border-radius: 35px;
-    border: 1px solid #097969;
+    border: 2px solid #097969;
     color: #097969;
+    font-weight: 900;
+    background: #ffffff;
 `;
 
 export const FilledButton = styled(OutlinedButton)`
     background: #097969;
     color: #ffffff;
+`;
+
+export const FilterContainer = styled.section`
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+`;
+
+export const FilterActionContainer = styled.section`
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
 `;

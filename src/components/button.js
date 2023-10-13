@@ -2,14 +2,17 @@ import React from 'react';
 import { OutlinedButton, FilledButton } from '../styles/Navbar';
 
 const button = (props) => {
-  const structure = props.isOutlined ? OutlinedButton :  FilledButton;
+  const handleClick = (operation) => {
+    console.log('operation ===> ', operation);
+  };
+
   return (
-        <structure
-          onClick={props.handleClick(props.operation)}
-        >
-          {props.title}
-        </structure>
-    );
+    <>
+      {props.isOutlined ? 
+        <OutlinedButton onClick={handleClick(props.operation)}> {props.title} </OutlinedButton>
+      : <FilledButton onClick={handleClick(props.operation)}> {props.title} </FilledButton>}
+    </>
+  );
 };
 
 export default button;

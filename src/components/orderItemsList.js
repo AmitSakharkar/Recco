@@ -3,16 +3,18 @@ import SearchableInput from './searchableInput';
 import Button from './button';
 import CheckIcon from '@material-ui/icons/Check';
 import CloseIcon from '@material-ui/icons/Close';
-import { OrderItemListContainer } from '../styles/Navbar';
+import { OrderItemListContainer, FilterContainer, FilterActionContainer } from '../styles/Navbar';
 
 const OrderItemsList = (props) => {
   return (
     <OrderItemListContainer>
-      <div>
+      <FilterContainer>
         <SearchableInput />
-        <Button title={'Add item'} isOutlined={true} />
-        <Button />
-      </div>
+        <FilterActionContainer>
+          <Button title={'Add item'} isOutlined={true} operation={'addItem'}/>
+          <Button />
+        </FilterActionContainer>
+      </FilterContainer>
       <table>
         <tr>
           <th></th>
