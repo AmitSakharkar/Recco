@@ -1,8 +1,7 @@
 import React from 'react';
 import SearchableInput from './searchableInput';
 import Button from './button';
-import CheckIcon from '@material-ui/icons/Check';
-import CloseIcon from '@material-ui/icons/Close';
+import IconButtons from './iconButton';
 import { OrderItemListContainer, FilterContainer, FilterActionContainer } from '../styles/Navbar';
 
 const OrderItemsList = (props) => {
@@ -12,7 +11,7 @@ const OrderItemsList = (props) => {
         <SearchableInput />
         <FilterActionContainer>
           <Button title={'Add item'} isOutlined={true} operation={'addItem'}/>
-          <Button />
+          <IconButtons iconButtonFor={'shop'}/>
         </FilterActionContainer>
       </FilterContainer>
       <table>
@@ -35,7 +34,11 @@ const OrderItemsList = (props) => {
               <td key={el.quantity +'_'+i}>{el.quantity}</td>
               <td key={el.total +'_'+i}>{el.total}</td>
               <td key={el.status +'_'+i}>{el.status}</td>
-              <td><><CheckIcon/> <CloseIcon /> <Button /></></td>
+              <td>
+                <IconButtons iconButtonFor={'select'} />
+                <IconButtons iconButtonFor={'close'} />
+                <Button title={'Edit'}/>
+              </td>
             </tr>
           ))}
       </table>

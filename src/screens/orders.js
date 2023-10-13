@@ -18,7 +18,7 @@ const OrderPage = () => {
                 <OrderNumberHeader>Order {orderData.number}</OrderNumberHeader>
                 <OrderConfirmationAction>
                     <Button title={'Back'} isOutlined={true} operation={'back'}/>
-                    <Button title={'Approve Order'} isOutlined={false} operation={'approveOrder'}/>
+                    <Button title={'Approve Order'} isFilled={true} operation={'approveOrder'}/>
                 </OrderConfirmationAction>
             </OrderActionArea>
         </OrderNumberDetails>

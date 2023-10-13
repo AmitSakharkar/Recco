@@ -110,6 +110,12 @@ export const FilledButton = styled(OutlinedButton)`
     color: #ffffff;
 `;
 
+export const PlainButton = styled.button`
+    font-size: 10px;
+    background: transparent;
+    border: none;
+`;
+
 export const FilterContainer = styled.section`
     display: flex;
     justify-content: space-between;
@@ -117,7 +123,17 @@ export const FilterContainer = styled.section`
 `;
 
 export const FilterActionContainer = styled.section`
-    width: 30%;
+    width: 18%;
     display: flex;
     justify-content: space-between;
+`;
+
+export const SearchableInputContainer = styled.section`
+    padding-left: 2.375rem;
+`;
+
+export const InputField = styled.input`
+    border-radius: 35px;
+    height: 60%;
+    padding: 0 20px;
 `;

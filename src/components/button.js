@@ -1,5 +1,6 @@
 import React from 'react';
-import { OutlinedButton, FilledButton } from '../styles/Navbar';
+import { OutlinedButton, FilledButton, PlainButton } from '../styles/Navbar';
+
 
 const button = (props) => {
   const handleClick = (operation) => {
@@ -10,7 +11,10 @@ const button = (props) => {
     <>
       {props.isOutlined ? 
         <OutlinedButton onClick={handleClick(props.operation)}> {props.title} </OutlinedButton>
-      : <FilledButton onClick={handleClick(props.operation)}> {props.title} </FilledButton>}
+      : props.isFilled ? 
+        <FilledButton onClick={handleClick(props.operation)}> {props.title} </FilledButton>
+      : <PlainButton onClick={handleClick(props.operation)}> {props.title} </PlainButton>
+      }
     </>
   );
 };
