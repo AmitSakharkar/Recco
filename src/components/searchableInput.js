@@ -1,7 +1,5 @@
 import React from 'react';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
-import InputAdornment from '@mui/material/InputAdornment';
-import IconButton from '@mui/material/IconButton';
 import { SearchableInputContainer, InputField } from '../styles/Navbar';
 
 const SearchableInput = () => {
@@ -15,24 +13,14 @@ const SearchableInput = () => {
     }
     return (
         <>
-            <SearchableInputContainer class="form-group has-search">
+            <SearchableInputContainer>
                 <InputField
                     type="text"
-                    placeholder="Search"
+                    placeholder="Search product name"
                     onChange={handleInput}
                     onBlur={handleSearch}
-                    endAdornment={
-                        <InputAdornment position="end">
-                            <IconButton
-                                aria-label="toggle password visibility"
-                                onClick={handleSearch}
-                                edge="end"
-                            >
-                                <SearchOutlinedIcon />
-                            </IconButton>
-                        </InputAdornment>
-                    }
                 />
+                <SearchOutlinedIcon onClick={handleSearch}/>   
             </SearchableInputContainer>
         </>
     );

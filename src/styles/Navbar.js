@@ -129,11 +129,17 @@ export const FilterActionContainer = styled.section`
 `;
 
 export const SearchableInputContainer = styled.section`
-    padding-left: 2.375rem;
+    border-radius: 35px;
+    height: 60%;
+    padding: 0px 5px 0px 10px;
+    border: 2px solid;
+    width: 30%;
+    display: flex;
+    justify-content: sapce-between;
+    align-items: center;
 `;
 
 export const InputField = styled.input`
-    border-radius: 35px;
-    height: 60%;
-    padding: 0 20px;
+    border: 0px;
+    width: 90%;
 `;
