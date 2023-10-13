@@ -1,3 +1,4 @@
+import React from 'react';
 import Navbar from "./components/navbar";
 import StorePage from "./screens/store";
 import OrderPage from "./screens/orders";

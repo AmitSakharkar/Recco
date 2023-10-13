@@ -1,11 +1,23 @@
 import React from 'react';
 
 const OrderDetails = (props) => {
-    let orderDetails = props.data;
-    const { order_list_data, ...updatedData} = orderDetails;
-    console.log(updatedData);
-  return (
-        <span>OrderDetails {Object.keys(updatedData).length}</span>
+    const filteredData = props.data;
+    const titles = props.titles;
+    console.log('filteredData ===> ', filteredData);
+    console.log('titles ===> ', titles);
+    return (
+        <div>
+            {titles?.forEach((key) => (
+                <>
+                    <span>
+                        {key}
+                    </span>
+                    <span>
+                        {filteredData[key]}
+                    </span>
+                </>
+            ))}
+        </div>
     );
 };
 
