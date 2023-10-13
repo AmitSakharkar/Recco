@@ -3,17 +3,19 @@ import SearchableInput from './searchableInput';
 import Button from './button';
 import CheckIcon from '@material-ui/icons/Check';
 import CloseIcon from '@material-ui/icons/Close';
+import { OrderItemListContainer } from '../styles/Navbar';
 
 const OrderItemsList = (props) => {
   return (
-    <div>
+    <OrderItemListContainer>
       <div>
         <SearchableInput />
-        <Button />
+        <Button title={'Add item'} isOutlined={true} />
         <Button />
       </div>
       <table>
         <tr>
+          <th></th>
           <th>Product name</th>
           <th>Brand</th>
           <th>Price</th>
@@ -24,6 +26,7 @@ const OrderItemsList = (props) => {
         </tr>
           {props.data.map((el, i) => (
             <tr index={i}>
+              <td></td>
               <td key={el.product_name +'_'+i}>{el.product_name}</td>
               <td key={el.brand +'_'+i}>{el.brand}</td>
               <td key={el.price +'_'+i}>{el.price}</td>
@@ -34,7 +37,7 @@ const OrderItemsList = (props) => {
             </tr>
           ))}
       </table>
-    </div>
+    </OrderItemListContainer>
   );
 };
 

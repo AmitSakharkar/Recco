@@ -88,3 +88,21 @@ export const OrderDetailsContainer = styled.section`
     position: absolute;
     padding: 2% 10%;
 `;
+
+export const OrderItemListContainer = styled.section`
+    border-radius: 10px;
+    background: #ffffff;
+    padding: 20px;
+`;
+
+export const OutlinedButton = styled.button`
+    padding: 10px;
+    border-radius: 35px;
+    border: 1px solid #097969;
+    color: #097969;
+`;
+
+export const FilledButton = styled(OutlinedButton)`
+    background: #097969;
+    color: #ffffff;
+`;
