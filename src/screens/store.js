@@ -1,9 +1,8 @@
 import React from 'react';
+import CommingSoon from '../components/commingSoon';
 
 const StorePage = () => {
-  return (
-        <span>StorePage</span>
-    );
+  return <CommingSoon />
 };
 
 export default StorePage;

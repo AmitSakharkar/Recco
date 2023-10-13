@@ -3,6 +3,7 @@ import Navbar from "./components/navbar";
 import StorePage from "./screens/store";
 import OrderPage from "./screens/orders";
 import AnalyticPage from "./screens/analytics";
+import { MainWrapper } from './styles/Navbar';
 
 function App() {
   let component
@@ -21,10 +22,10 @@ function App() {
       break;
   }
   return (
-    <div className="App">
+    <MainWrapper>
       <Navbar />
       {component}
-    </div>
+    </MainWrapper>
   );
 }
 

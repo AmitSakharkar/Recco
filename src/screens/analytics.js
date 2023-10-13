@@ -1,9 +1,8 @@
 import React from 'react';
+import CommingSoon from '../components/commingSoon';
 
 const AnalyticPage = () => {
-  return (
-        <span>AnalyticPage</span>
-    );
+  return <CommingSoon />
 };
 
 export default AnalyticPage;

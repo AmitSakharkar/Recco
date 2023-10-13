@@ -4,6 +4,7 @@ import { orders } from '../store/orderSlice';
 import Button from '../components/button';
 import OrderDetails from '../components/orderDetails';
 import OrderItemsList from '../components/orderItemsList';
+import { OrderNumberDetails, OrderBreadcrumb, OrderActionArea, OrderNumberHeader } from '../styles/Navbar';
 
 const OrderPage = () => {
   const orderData = useSelector(orders);
@@ -11,18 +12,16 @@ const OrderPage = () => {
   const titles = Object.keys(filteredData);
   return (
     <>
-        <div>
-            <div>
-                <span> Orders > {orderData.number} </span> 
-            </div>
-            <div>
-                <span>{orderData.number}</span>
+        <OrderNumberDetails>
+            <OrderBreadcrumb> Orders > <u>{orderData.number}</u> </OrderBreadcrumb> 
+            <OrderActionArea>
+                <OrderNumberHeader>Order {orderData.number}</OrderNumberHeader>
                 <div>
                     <Button>Back</Button>
                     <Button>Approve Order</Button>
                 </div>
-            </div>
-        </div>
+            </OrderActionArea>
+        </OrderNumberDetails>
         <div>
             <OrderDetails data={filteredData} titles={titles}/>
             <OrderItemsList data={orderData.order_list_data}/>
