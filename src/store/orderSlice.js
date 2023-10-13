@@ -24,4 +24,6 @@ export const orderSlice = createSlice({
 // Action creators are generated for each case reducer function
 export const { increment, decrement, incrementByAmount } = orderSlice.actions
 
+export const orders = state => state.order.orderData
+
 export default orderSlice.reducer
