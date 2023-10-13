@@ -53,7 +53,6 @@ export const CommingSoonImg = styled.img`
 
 export const OrderNumberDetails = styled.section`
     top: 9%;
-    width: 100%;
     height: 15%;
     position: relative;
     background: white;
@@ -76,4 +75,16 @@ export const OrderActionArea = styled.section`
 export const OrderNumberHeader = styled.label`
     font-size: 1.3rem;
     font-weight: 700;
+`;
+
+export const OrderConfirmationAction  = styled.section`
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+`;
+
+export const OrderDetailsContainer = styled.section`
+    top: 24%;
+    position: absolute;
+    padding: 2% 10%;
 `;
