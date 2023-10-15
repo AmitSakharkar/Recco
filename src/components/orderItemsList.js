@@ -2,7 +2,7 @@ import React from 'react';
 import SearchableInput from './searchableInput';
 import Button from './button';
 import IconButtons from './iconButton';
-import { OrderItemListContainer, FilterContainer, FilterActionContainer } from '../styles/Navbar';
+import { OrderItemListContainer, FilterContainer, FilterActionContainer, TableTitleRow, ProductImage, TableTitle } from '../styles/Navbar';
 
 const OrderItemsList = (props) => {
   return (
@@ -15,19 +15,19 @@ const OrderItemsList = (props) => {
         </FilterActionContainer>
       </FilterContainer>
       <table>
-        <tr>
-          <th></th>
-          <th>Product name</th>
-          <th>Brand</th>
-          <th>Price</th>
-          <th>Quantity</th>
-          <th>total</th>
-          <th>Status</th>
-          <th></th>
-        </tr>
+        <TableTitleRow>
+          <TableTitle></TableTitle>
+          <TableTitle>Product name</TableTitle>
+          <TableTitle>Brand</TableTitle>
+          <TableTitle>Price</TableTitle>
+          <TableTitle>Quantity</TableTitle>
+          <TableTitle>total</TableTitle>
+          <TableTitle>Status</TableTitle>
+          <TableTitle></TableTitle>
+        </TableTitleRow>
           {props.data.map((el, i) => (
             <tr index={i}>
-              <td></td>
+              <td><ProductImage src='/images/Avocado Hass.jpg' alt='product_image'/></td>
               <td key={el.product_name +'_'+i}>{el.product_name}</td>
               <td key={el.brand +'_'+i}>{el.brand}</td>
               <td key={el.price +'_'+i}>{el.price}</td>

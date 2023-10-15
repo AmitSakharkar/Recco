@@ -130,7 +130,6 @@ export const FilterActionContainer = styled.section`
 
 export const SearchableInputContainer = styled.section`
     border-radius: 35px;
-    height: 60%;
     padding: 0px 5px 0px 10px;
     border: 2px solid;
     width: 30%;
@@ -142,4 +141,17 @@ export const SearchableInputContainer = styled.section`
 export const InputField = styled.input`
     border: 0px;
     width: 90%;
+`;
+
+export const TableTitleRow = styled.tr`
+    height: 30px;
+`;
+
+export const ProductImage = styled.img`
+    height: 30px;
+    width: 30px;
+`;
+
+export const TableTitle = styled.th`
+    font-size: 0.8rem;
 `;
